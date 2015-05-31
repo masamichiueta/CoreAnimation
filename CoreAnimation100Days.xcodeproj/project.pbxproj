@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242807B21B1B522900AC055E /* Day1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242807B11B1B522900AC055E /* Day1View.swift */; };
 		245B2AE71B19841100F6CF06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B2AE61B19841100F6CF06 /* AppDelegate.swift */; };
 		245B2AE91B19841100F6CF06 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B2AE81B19841100F6CF06 /* MasterViewController.swift */; };
 		245B2AEB1B19841100F6CF06 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B2AEA1B19841100F6CF06 /* DetailViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		242807B11B1B522900AC055E /* Day1View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day1View.swift; sourceTree = "<group>"; };
 		245B2AE11B19841100F6CF06 /* CoreAnimation100Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimation100Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		245B2AE51B19841100F6CF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245B2AE61B19841100F6CF06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				245B2AEF1B19841100F6CF06 /* Images.xcassets */,
 				245B2AF11B19841100F6CF06 /* LaunchScreen.xib */,
 				245B2AE41B19841100F6CF06 /* Supporting Files */,
+				242807B11B1B522900AC055E /* Day1View.swift */,
 			);
 			path = CoreAnimation100Days;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				245B2AEB1B19841100F6CF06 /* DetailViewController.swift in Sources */,
 				245B2AE91B19841100F6CF06 /* MasterViewController.swift in Sources */,
 				245B2AE71B19841100F6CF06 /* AppDelegate.swift in Sources */,
+				242807B21B1B522900AC055E /* Day1View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +419,7 @@
 				245B2B041B19841100F6CF06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		245B2B051B19841100F6CF06 /* Build configuration list for PBXNativeTarget "CoreAnimation100DaysTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				245B2B071B19841100F6CF06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
