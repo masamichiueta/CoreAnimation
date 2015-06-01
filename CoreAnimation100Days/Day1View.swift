@@ -25,7 +25,6 @@ class Day1View: UIView {
     }
     
     func configureView() {
- //       self.opaque = false
         
     }
 
