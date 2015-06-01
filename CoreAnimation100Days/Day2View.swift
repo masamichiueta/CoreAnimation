@@ -10,6 +10,13 @@ import UIKit
 
 @objc(Day2View)
 class Day2View: UIView {
+    
+    var circleProgressLayer: CAShapeLayer!
+    var circleBackLayer: CAShapeLayer!
+    
+    let circleRadius = CGFloat(100)
+    var circleCenter: CGPoint!
+    
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,11 +29,13 @@ class Day2View: UIView {
     }
     
     func configureView() {
-        
+        circleCenter = CGPoint(x: self.center.x , y: 200)
     }
     
     override func drawRect(rect: CGRect) {
         drawBackgoundGradient()
+        drawBackCircle()
+        drawProgressCircle()
     }
     
     func drawBackgoundGradient() {
@@ -41,6 +50,37 @@ class Day2View: UIView {
         let gradient = CGGradientCreateWithColors(space, colors, locations)
         CGContextDrawLinearGradient(ctx, gradient, CGPointZero, CGPoint(x: 0, y: self.bounds.height), CGGradientDrawingOptions.allZeros)
         CGContextRestoreGState(ctx)
+    }
+    
+    func drawBackCircle() {
+        if circleBackLayer == nil {
+            circleBackLayer =  CAShapeLayer()
+            let path = UIBezierPath(arcCenter: circleCenter, radius: circleRadius, startAngle: CGFloat(0), endAngle: CGFloat(M_PI * 2), clockwise: true)
+            circleBackLayer.path = path.CGPath
+            circleBackLayer.strokeColor = UIColor.darkGrayColor().CGColor
+            circleBackLayer.opacity = 0.5
+            circleBackLayer.fillColor = nil
+            circleBackLayer.lineWidth = 20.0
+            self.layer.addSublayer(circleBackLayer)
+        }
+    }
+    
+    func drawProgressCircle() {
+        if circleProgressLayer == nil {
+            circleProgressLayer = CAShapeLayer()
+            
+            var startAngle = CGFloat(-M_PI_2)
+            var endAngle = CGFloat(M_PI_2 * 0.8)
+            let path = UIBezierPath(arcCenter: circleCenter, radius: circleRadius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+            circleProgressLayer.path = path.CGPath
+            circleProgressLayer.lineWidth = 20.0
+            circleProgressLayer.lineCap = "round"
+            circleProgressLayer.strokeColor = UIColor.whiteColor().CGColor
+            circleProgressLayer.fillColor  = nil
+            self.layer.addSublayer(circleProgressLayer)
+        }
+        
+        
     }
 
 }
