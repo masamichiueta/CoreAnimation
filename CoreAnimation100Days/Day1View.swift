@@ -13,21 +13,23 @@ class Day1View: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.opaque = false
-        
+        configureView()
     }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.opaque = false
+        configureView()
     }
+    
+    func configureView() {
+        self.opaque = false
+        
+    }
+    
+    
 
     override func drawRect(rect: CGRect) {
-        let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 100, height: 100), cornerRadius: 5.0)
-        path.lineCapStyle = kCGLineCapRound
-        path.lineWidth = 3.0
-        UIColor.redColor().setStroke()
-        path.stroke()
+        
     }
     
 }

@@ -40,13 +40,7 @@ class MasterViewController: UITableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 
-                let classString = "Day\(indexPath.row + 1)View"
-                
-                if let objClass = NSClassFromString(classString) as? NSObject.Type {
-                    let viewClass = objClass as! UIView.Type
-                    let dayView = viewClass(frame: CGRect(origin: CGPointZero, size: CGSize(width: 200, height: 200)))
-                    controller.dayView = dayView
-                }
+                controller.dayNumber = indexPath.row + 1
                 
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
