@@ -13,23 +13,14 @@ import UIKit
     
     var circleProgressLayer: CAShapeLayer!
     var circleBackLayer: CAShapeLayer!
-    
-    let circleRadius = CGFloat(100)
     var circleCenter: CGPoint!
-    
     var currentTime = 0
     
-    @IBInspectable var gradientStartColor: UIColor = UIColor(red: 217 / 255.0, green: 69 / 255.0, blue: 74.0 / 255.0, alpha: 1.0) {
-        didSet {
-            updateView()
-        }
-    }
+    @IBInspectable var circleRadius: CGFloat = CGFloat(100)
     
-    @IBInspectable var gradientEndColor: UIColor = UIColor(red: 204.0 / 255.0, green: 104.0 / 255.0, blue: 58.0 / 255.0, alpha: 1.0) {
-        didSet {
-            updateView()
-        }
-    }
+    @IBInspectable var gradientStartColor: UIColor = UIColor(red: 217 / 255.0, green: 69 / 255.0, blue: 74.0 / 255.0, alpha: 1.0)
+    
+    @IBInspectable var gradientEndColor: UIColor = UIColor(red: 204.0 / 255.0, green: 104.0 / 255.0, blue: 58.0 / 255.0, alpha: 1.0)
     
     
     override init(frame: CGRect) {
@@ -44,19 +35,19 @@ import UIKit
     
     
     override func prepareForInterfaceBuilder() {
-        updateView()
+        configureView()
+        drawBackgoundGradient()
+        drawBackCircle()
+        drawProgressCircle()
+        drawTimeText()
     }
     
     func configureView() {
         circleCenter = CGPoint(x: self.center.x , y: 200)
     }
     
-    func updateView() {
-        
-    }
-
-    
     override func drawRect(rect: CGRect) {
+        configureView()
         drawBackgoundGradient()
         drawBackCircle()
         drawProgressCircle()
