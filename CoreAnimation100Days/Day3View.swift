@@ -9,13 +9,27 @@
 import UIKit
 
 @objc(Day3View)
-class Day3View: UIView {
+@IBDesignable class Day3View: UIView {
     
     var circleProgressLayer: CAShapeLayer!
     var circleBackLayer: CAShapeLayer!
     
     let circleRadius = CGFloat(100)
     var circleCenter: CGPoint!
+    
+    var currentTime = 0
+    
+    @IBInspectable var gradientStartColor: UIColor = UIColor(red: 217 / 255.0, green: 69 / 255.0, blue: 74.0 / 255.0, alpha: 1.0) {
+        didSet {
+            updateView()
+        }
+    }
+    
+    @IBInspectable var gradientEndColor: UIColor = UIColor(red: 204.0 / 255.0, green: 104.0 / 255.0, blue: 58.0 / 255.0, alpha: 1.0) {
+        didSet {
+            updateView()
+        }
+    }
     
     
     override init(frame: CGRect) {
@@ -28,27 +42,36 @@ class Day3View: UIView {
         configureView()
     }
     
+    
+    override func prepareForInterfaceBuilder() {
+        updateView()
+    }
+    
     func configureView() {
         circleCenter = CGPoint(x: self.center.x , y: 200)
     }
+    
+    func updateView() {
+        
+    }
+
     
     override func drawRect(rect: CGRect) {
         drawBackgoundGradient()
         drawBackCircle()
         drawProgressCircle()
+        drawTimeText()
     }
     
     func drawBackgoundGradient() {
         let ctx = UIGraphicsGetCurrentContext()
         
         CGContextSaveGState(ctx)
-        let startColor = UIColor(red: 194.0 / 255.0, green: 70.0 / 255.0, blue: 70.0 / 255.0, alpha: 1.0)
-        let endColor = UIColor(red: 204.0 / 255.0, green: 104.0 / 255.0, blue: 58.0 / 255.0, alpha: 1.0)
-        let colors = [startColor.CGColor, endColor.CGColor]
+        let colors = [gradientStartColor.CGColor, gradientEndColor.CGColor]
         let locations:[CGFloat] = [0.0, 1.0]
         let space = CGColorSpaceCreateDeviceRGB()
         let gradient = CGGradientCreateWithColors(space, colors, locations)
-        CGContextDrawLinearGradient(ctx, gradient, CGPointZero, CGPoint(x: 0, y: self.bounds.height), CGGradientDrawingOptions.allZeros)
+        CGContextDrawLinearGradient(ctx, gradient, CGPointZero, CGPoint(x: 0, y: self.bounds.height / 2.0), CGGradientDrawingOptions.allZeros)
         CGContextRestoreGState(ctx)
     }
     
@@ -82,8 +105,26 @@ class Day3View: UIView {
         
     }
     
-    
-    
-    
+    func drawTimeText() {
+        var currentTimeStr: NSString = "2:50"
+        
+        let fieldColor: UIColor = UIColor.whiteColor()
+        let fieldFont = UIFont(name: "Helvetica Neue", size: 60)
+        var paraStyle = NSMutableParagraphStyle()
+        paraStyle.alignment = .Center
+        
+        var attributes = [
+            NSForegroundColorAttributeName: fieldColor,
+            NSParagraphStyleAttributeName: paraStyle,
+            NSFontAttributeName: fieldFont!
+        ]
+        
+        let fontHeight = fieldFont!.pointSize
+        
+        // Calculate the rectangle to draw text
+        let rect = CGRect(x: circleCenter.x - circleRadius, y: circleCenter.y - fontHeight / 2.0, width: circleRadius * 2, height: fontHeight)
+        
+        currentTimeStr.drawInRect(rect, withAttributes: attributes)
+    }
     
 }
