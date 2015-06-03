@@ -14,7 +14,10 @@ import UIKit
     var circleProgressLayer: CAShapeLayer!
     var circleBackLayer: CAShapeLayer!
     var circleCenter: CGPoint!
-    var currentTime = 0
+    var currentRate: CGFloat = 0
+    
+    var timer: NSTimer!
+    var progress: CGFloat = 0.0
     
     @IBInspectable var circleRadius: CGFloat = CGFloat(100)
     
@@ -84,23 +87,53 @@ import UIKit
             circleProgressLayer = CAShapeLayer()
             
             var startAngle = CGFloat(-M_PI_2)
-            var endAngle = CGFloat(M_PI_2 * 0.8)
+            var endAngle = CGFloat(M_PI + M_PI_2)
             let path = UIBezierPath(arcCenter: circleCenter, radius: circleRadius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
             circleProgressLayer.path = path.CGPath
             circleProgressLayer.lineWidth = 20.0
             circleProgressLayer.lineCap = "round"
             circleProgressLayer.strokeColor = UIColor.whiteColor().CGColor
             circleProgressLayer.fillColor  = nil
+            circleProgressLayer.strokeStart = 0.0
+            circleProgressLayer.strokeEnd = progress
             self.layer.addSublayer(circleProgressLayer)
         }
+    }
+    
+    func animate() {
         
+        
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.fromValue = 0.0
+        animation.toValue = progress
+        animation.duration = 2
+        animation.delegate = self
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        self.circleProgressLayer.strokeEnd = progress
+        self.circleProgressLayer.addAnimation(animation, forKey: "Progress")
+        
+        let a = NSTimeInterval(CGFloat(animation.duration) / (progress * 100))
+        println(a)
+        timer = NSTimer.scheduledTimerWithTimeInterval(a, target: self, selector: "updateText:", userInfo: nil, repeats: true)
+
+    }
+    
+    func updateText(timer: NSTimer) {
+        
+        if currentRate >= progress * 100 {
+            timer.invalidate()
+            return
+        }
+        
+        currentRate++
+        setNeedsDisplay()
     }
     
     func drawTimeText() {
-        var currentTimeStr: NSString = "2:50"
+        var currentTimeStr: NSString = "\(currentRate)%"
         
         let fieldColor: UIColor = UIColor.whiteColor()
-        let fieldFont = UIFont(name: "Helvetica Neue", size: 60)
+        let fieldFont = UIFont(name: "Helvetica Neue", size: 50)
         var paraStyle = NSMutableParagraphStyle()
         paraStyle.alignment = .Center
         
