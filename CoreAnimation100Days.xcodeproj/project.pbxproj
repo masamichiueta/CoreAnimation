@@ -15,6 +15,8 @@
 		245B2AF01B19841100F6CF06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 245B2AEF1B19841100F6CF06 /* Images.xcassets */; };
 		245B2AF31B19841100F6CF06 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245B2AF11B19841100F6CF06 /* LaunchScreen.xib */; };
 		245B2AFF1B19841100F6CF06 /* CoreAnimation100DaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B2AFE1B19841100F6CF06 /* CoreAnimation100DaysTests.swift */; };
+		245B62751B1F2A2200547242 /* Day4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B62741B1F2A2200547242 /* Day4View.swift */; };
+		245B62771B1F2A4600547242 /* Day4View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245B62761B1F2A4600547242 /* Day4View.xib */; };
 		24784A731B1DD7F200BE3C90 /* Day3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24784A721B1DD7F200BE3C90 /* Day3View.swift */; };
 		24784A751B1DDF5900BE3C90 /* Day3View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24784A741B1DDF5900BE3C90 /* Day3View.xib */; };
 		24E38CEB1B1C9F630033F52B /* Day2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E38CEA1B1C9F630033F52B /* Day2View.swift */; };
@@ -43,6 +45,8 @@
 		245B2AF81B19841100F6CF06 /* CoreAnimation100DaysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreAnimation100DaysTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		245B2AFD1B19841100F6CF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245B2AFE1B19841100F6CF06 /* CoreAnimation100DaysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimation100DaysTests.swift; sourceTree = "<group>"; };
+		245B62741B1F2A2200547242 /* Day4View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day4View.swift; sourceTree = "<group>"; };
+		245B62761B1F2A4600547242 /* Day4View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Day4View.xib; sourceTree = "<group>"; };
 		24784A721B1DD7F200BE3C90 /* Day3View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day3View.swift; sourceTree = "<group>"; };
 		24784A741B1DDF5900BE3C90 /* Day3View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Day3View.xib; sourceTree = "<group>"; };
 		24E38CEA1B1C9F630033F52B /* Day2View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day2View.swift; sourceTree = "<group>"; };
@@ -96,8 +100,8 @@
 				245B2AE41B19841100F6CF06 /* Supporting Files */,
 				242807B11B1B522900AC055E /* Day1View.swift */,
 				24E38CEA1B1C9F630033F52B /* Day2View.swift */,
-				24784A721B1DD7F200BE3C90 /* Day3View.swift */,
-				24784A741B1DDF5900BE3C90 /* Day3View.xib */,
+				245B62781B1F2A5200547242 /* Day3 */,
+				245B62791B1F2A6400547242 /* Day4 */,
 			);
 			path = CoreAnimation100Days;
 			sourceTree = "<group>";
@@ -125,6 +129,24 @@
 				245B2AFD1B19841100F6CF06 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		245B62781B1F2A5200547242 /* Day3 */ = {
+			isa = PBXGroup;
+			children = (
+				24784A721B1DD7F200BE3C90 /* Day3View.swift */,
+				24784A741B1DDF5900BE3C90 /* Day3View.xib */,
+			);
+			name = Day3;
+			sourceTree = "<group>";
+		};
+		245B62791B1F2A6400547242 /* Day4 */ = {
+			isa = PBXGroup;
+			children = (
+				245B62741B1F2A2200547242 /* Day4View.swift */,
+				245B62761B1F2A4600547242 /* Day4View.xib */,
+			);
+			name = Day4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +233,7 @@
 				24784A751B1DDF5900BE3C90 /* Day3View.xib in Resources */,
 				245B2AF31B19841100F6CF06 /* LaunchScreen.xib in Resources */,
 				245B2AF01B19841100F6CF06 /* Images.xcassets in Resources */,
+				245B62771B1F2A4600547242 /* Day4View.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +254,7 @@
 				245B2AEB1B19841100F6CF06 /* DetailViewController.swift in Sources */,
 				24E38CEB1B1C9F630033F52B /* Day2View.swift in Sources */,
 				245B2AE91B19841100F6CF06 /* MasterViewController.swift in Sources */,
+				245B62751B1F2A2200547242 /* Day4View.swift in Sources */,
 				245B2AE71B19841100F6CF06 /* AppDelegate.swift in Sources */,
 				242807B21B1B522900AC055E /* Day1View.swift in Sources */,
 				24784A731B1DD7F200BE3C90 /* Day3View.swift in Sources */,
