@@ -33,11 +33,20 @@ class DetailViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         
-        if dayView is Day4View {
+        switch dayView {
+        case dayView as Day4View:
             let _dayView = dayView as! Day4View
             _dayView.progress = 0.8
             _dayView.animate()
+        case dayView as Day5View:
+            let _dayView = dayView as! Day5View
+            _dayView.progress = 0.6
+            _dayView.animate()
+        default:
+            break
         }
+        
+        
         
     }
 
