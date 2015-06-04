@@ -26,6 +26,7 @@
             <connections>
                 <outlet property="rateLabel" destination="ocS-No-XBi" id="2zN-OD-Znp"/>
             </connections>
+            <point key="canvasLocation" x="278" y="199"/>
         </view>
     </objects>
 </document>

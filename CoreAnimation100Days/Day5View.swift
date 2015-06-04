@@ -62,9 +62,7 @@ import UIKit
             let space = CGColorSpaceCreateDeviceRGB()
             let gradient = CGGradientCreateWithColors(space, colors, locations)
             gradientLayer.colors = colors
-            gradientLayer.locations = locations
-            gradientLayer.startPoint = CGPointZero
-            gradientLayer.endPoint = CGPoint(x: 0, y: self.bounds.height / 2.0)
+            gradientLayer.locations = locations            
             gradientLayer.frame = CGRect(origin: CGPointZero, size: CGSize(width: self.bounds.width, height: self.bounds.height / 2.0))
             self.layer.insertSublayer(gradientLayer, atIndex: 0)
         }
