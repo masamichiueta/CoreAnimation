@@ -10,46 +10,10 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var dayNumber: Int = 1
-    var dayView: UIView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let classString = "Day\(dayNumber)View"
-        
-        if let nibFile = NSBundle.mainBundle().pathForResource(classString, ofType: "nib") {
-            let nib = NSBundle.mainBundle().loadNibNamed(classString, owner: nil, options: nil)
-            dayView = nib[0] as! UIView
-            dayView.frame = CGRect(origin: CGPointZero, size: CGSize(width: self.view.bounds.width, height: self.view.bounds.height))
-            dayView.setNeedsDisplay()
-            self.view.addSubview(dayView)
-        } else if let objClass = NSClassFromString(classString) as? NSObject.Type {
-            let viewClass = objClass as! UIView.Type
-            dayView = viewClass(frame: CGRect(origin: CGPointZero, size: CGSize(width: self.view.bounds.width, height: self.view.bounds.height)))
-            self.view.addSubview(dayView)
-        }
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        
-        switch dayView {
-        case dayView as Day4View:
-            let _dayView = dayView as! Day4View
-            _dayView.progress = 0.8
-            _dayView.animate()
-        case dayView as Day5View:
-            let _dayView = dayView as! Day5View
-            _dayView.progress = 0.6
-            _dayView.animate()
-        case dayView as Day6View:
-            let _dayView = dayView as! Day6View
-            _dayView.progress = 0.9
-            _dayView.animate()
-        default:
-            break
-        }
-        
         
         
     }

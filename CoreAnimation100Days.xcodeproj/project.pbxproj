@@ -17,13 +17,14 @@
 		245B2AFF1B19841100F6CF06 /* CoreAnimation100DaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B2AFE1B19841100F6CF06 /* CoreAnimation100DaysTests.swift */; };
 		245B62751B1F2A2200547242 /* Day4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B62741B1F2A2200547242 /* Day4View.swift */; };
 		245B62771B1F2A4600547242 /* Day4View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245B62761B1F2A4600547242 /* Day4View.xib */; };
+		24612CFF1B21CB3C00636194 /* Day6View.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24612CFE1B21CB3C00636194 /* Day6View.storyboard */; };
+		24612D011B21CD0D00636194 /* Day6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24612D001B21CD0D00636194 /* Day6ViewController.swift */; };
+		24612D031B21D02700636194 /* Detail1to5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24612D021B21D02700636194 /* Detail1to5ViewController.swift */; };
 		24784A731B1DD7F200BE3C90 /* Day3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24784A721B1DD7F200BE3C90 /* Day3View.swift */; };
 		24784A751B1DDF5900BE3C90 /* Day3View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24784A741B1DDF5900BE3C90 /* Day3View.xib */; };
 		249BB62C1B207E0F00E41040 /* Day5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249BB62B1B207E0F00E41040 /* Day5View.swift */; };
 		249BB62E1B207E1C00E41040 /* Day5View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249BB62D1B207E1C00E41040 /* Day5View.xib */; };
 		24E38CEB1B1C9F630033F52B /* Day2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E38CEA1B1C9F630033F52B /* Day2View.swift */; };
-		24FE63381B21BE2500CA30CE /* Day6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FE63371B21BE2500CA30CE /* Day6View.swift */; };
-		24FE633A1B21BE3800CA30CE /* Day6View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FE63391B21BE3800CA30CE /* Day6View.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,13 +52,14 @@
 		245B2AFE1B19841100F6CF06 /* CoreAnimation100DaysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimation100DaysTests.swift; sourceTree = "<group>"; };
 		245B62741B1F2A2200547242 /* Day4View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day4View.swift; sourceTree = "<group>"; };
 		245B62761B1F2A4600547242 /* Day4View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Day4View.xib; sourceTree = "<group>"; };
+		24612CFE1B21CB3C00636194 /* Day6View.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Day6View.storyboard; sourceTree = "<group>"; };
+		24612D001B21CD0D00636194 /* Day6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day6ViewController.swift; sourceTree = "<group>"; };
+		24612D021B21D02700636194 /* Detail1to5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detail1to5ViewController.swift; sourceTree = "<group>"; };
 		24784A721B1DD7F200BE3C90 /* Day3View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day3View.swift; sourceTree = "<group>"; };
 		24784A741B1DDF5900BE3C90 /* Day3View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Day3View.xib; sourceTree = "<group>"; };
 		249BB62B1B207E0F00E41040 /* Day5View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day5View.swift; sourceTree = "<group>"; };
 		249BB62D1B207E1C00E41040 /* Day5View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Day5View.xib; sourceTree = "<group>"; };
 		24E38CEA1B1C9F630033F52B /* Day2View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day2View.swift; sourceTree = "<group>"; };
-		24FE63371B21BE2500CA30CE /* Day6View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day6View.swift; sourceTree = "<group>"; };
-		24FE63391B21BE3800CA30CE /* Day6View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Day6View.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				245B2AE61B19841100F6CF06 /* AppDelegate.swift */,
 				245B2AE81B19841100F6CF06 /* MasterViewController.swift */,
 				245B2AEA1B19841100F6CF06 /* DetailViewController.swift */,
+				24612D021B21D02700636194 /* Detail1to5ViewController.swift */,
 				245B2AEC1B19841100F6CF06 /* Main.storyboard */,
 				245B2AEF1B19841100F6CF06 /* Images.xcassets */,
 				245B2AF11B19841100F6CF06 /* LaunchScreen.xib */,
@@ -171,8 +174,8 @@
 		24FE63361B21BE0700CA30CE /* Day6 */ = {
 			isa = PBXGroup;
 			children = (
-				24FE63371B21BE2500CA30CE /* Day6View.swift */,
-				24FE63391B21BE3800CA30CE /* Day6View.xib */,
+				24612CFE1B21CB3C00636194 /* Day6View.storyboard */,
+				24612D001B21CD0D00636194 /* Day6ViewController.swift */,
 			);
 			name = Day6;
 			sourceTree = "<group>";
@@ -258,7 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				245B2AEE1B19841100F6CF06 /* Main.storyboard in Resources */,
-				24FE633A1B21BE3800CA30CE /* Day6View.xib in Resources */,
+				24612CFF1B21CB3C00636194 /* Day6View.storyboard in Resources */,
 				249BB62E1B207E1C00E41040 /* Day5View.xib in Resources */,
 				24784A751B1DDF5900BE3C90 /* Day3View.xib in Resources */,
 				245B2AF31B19841100F6CF06 /* LaunchScreen.xib in Resources */,
@@ -283,12 +286,13 @@
 			files = (
 				245B2AEB1B19841100F6CF06 /* DetailViewController.swift in Sources */,
 				24E38CEB1B1C9F630033F52B /* Day2View.swift in Sources */,
+				24612D011B21CD0D00636194 /* Day6ViewController.swift in Sources */,
+				24612D031B21D02700636194 /* Detail1to5ViewController.swift in Sources */,
 				245B2AE91B19841100F6CF06 /* MasterViewController.swift in Sources */,
 				245B62751B1F2A2200547242 /* Day4View.swift in Sources */,
 				245B2AE71B19841100F6CF06 /* AppDelegate.swift in Sources */,
 				242807B21B1B522900AC055E /* Day1View.swift in Sources */,
 				24784A731B1DD7F200BE3C90 /* Day3View.swift in Sources */,
-				24FE63381B21BE2500CA30CE /* Day6View.swift in Sources */,
 				249BB62C1B207E0F00E41040 /* Day5View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

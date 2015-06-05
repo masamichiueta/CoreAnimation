@@ -1,5 +1,5 @@
 //
-//  Day6View.swift
+//  Day6ViewController.swift
 //  CoreAnimation100Days
 //
 //  Created by UetaMasamichi on 2015/06/05.
@@ -8,8 +8,11 @@
 
 import UIKit
 
-@objc(Day6View)
-@IBDesignable class Day6View: UIView {
+@IBDesignable class Day6ViewController: DetailViewController {
+
+    @IBOutlet weak var gradientView: UIView!
+    @IBOutlet weak var rateLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     var gradientLayer: CAGradientLayer!
     var circleProgressLayer: CAShapeLayer!
@@ -19,41 +22,51 @@ import UIKit
     
     var timer: NSTimer!
     var progress: CGFloat = 0.0
-    
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var gradientView: UIView!
-    
-    @IBOutlet weak var rateLabel: UILabel!
-    
+
     @IBInspectable var circleRadius: CGFloat = CGFloat(100)
     
     @IBInspectable var gradientStartColor: UIColor = UIColor(red: 217 / 255.0, green: 69 / 255.0, blue: 74.0 / 255.0, alpha: 1.0)
     
     @IBInspectable var gradientEndColor: UIColor = UIColor(red: 204.0 / 255.0, green: 104.0 / 255.0, blue: 58.0 / 255.0, alpha: 1.0)
     
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        circleCenter = CGPoint(x: self.view.center.x , y: 200)
+        drawBackgoundGradient()
+        drawBackCircle()
+        drawProgressCircle()
+        progress = 0.8
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
     }
     
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    override func viewDidAppear(animated: Bool) {
+        animate()
     }
-    
     
     override func prepareForInterfaceBuilder() {
-        circleCenter = CGPoint(x: self.center.x , y: 200)
+        progress = 0.8
+        circleCenter = CGPoint(x: self.view.center.x , y: 200)
         drawBackgoundGradient()
         drawBackCircle()
         drawProgressCircle()
+        
     }
-    
-    override func drawRect(rect: CGRect) {
-        circleCenter = CGPoint(x: self.center.x , y: 200)
-        drawBackgoundGradient()
-        drawBackCircle()
-        drawProgressCircle()
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-ba
+    sed application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
+    */
     
     func drawBackgoundGradient() {
         
@@ -66,7 +79,7 @@ import UIKit
             let gradient = CGGradientCreateWithColors(space, colors, locations)
             gradientLayer.colors = colors
             gradientLayer.locations = locations
-            gradientLayer.frame = CGRect(origin: CGPointZero, size: CGSize(width: self.bounds.width, height: self.bounds.height / 2.0))
+            gradientLayer.frame = CGRect(origin: CGPointZero, size: CGSize(width: self.view.bounds.width, height: self.view.bounds.height / 2.0))
             gradientView.layer.insertSublayer(gradientLayer, atIndex: 0)
         }
     }
@@ -111,8 +124,10 @@ import UIKit
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         self.circleProgressLayer.strokeEnd = progress
         self.circleProgressLayer.addAnimation(animation, forKey: "Progress")
-        timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(CGFloat(animation.duration) / (progress * 100)), target: self, selector: "updateText:", userInfo: nil, repeats: true)
         
+        if progress != 0.0 {
+            timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(CGFloat(animation.duration) / (progress * 100)), target: self, selector: "updateText:", userInfo: nil, repeats: true)
+        }
     }
     
     func updateText(timer: NSTimer) {
@@ -129,4 +144,5 @@ import UIKit
         }
         
     }
+
 }

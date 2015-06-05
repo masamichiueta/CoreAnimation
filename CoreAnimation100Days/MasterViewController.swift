@@ -38,7 +38,7 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! Detail1to5ViewController
                 
                 controller.dayNumber = indexPath.row + 1
                 
@@ -63,6 +63,21 @@ class MasterViewController: UITableViewController {
 
         cell.textLabel!.text = "Day \(indexPath.row + 1)"
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        switch indexPath.row {
+        case 5:
+            let nav = UIStoryboard(name: "Day6View", bundle: nil).instantiateInitialViewController() as! UINavigationController
+            let detail = nav.topViewController as! Day6ViewController
+            self.detailViewController = detail
+            self.navigationController?.pushViewController(detail, animated: true)
+        default:
+            self.performSegueWithIdentifier("showDetail", sender: self)
+        }
+        
+        
     }
 }
 
