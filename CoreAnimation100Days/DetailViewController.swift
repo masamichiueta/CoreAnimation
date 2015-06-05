@@ -42,6 +42,10 @@ class DetailViewController: UIViewController {
             let _dayView = dayView as! Day5View
             _dayView.progress = 0.6
             _dayView.animate()
+        case dayView as Day6View:
+            let _dayView = dayView as! Day6View
+            _dayView.progress = 0.9
+            _dayView.animate()
         default:
             break
         }

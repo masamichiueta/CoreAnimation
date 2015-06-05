@@ -22,6 +22,8 @@
 		249BB62C1B207E0F00E41040 /* Day5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249BB62B1B207E0F00E41040 /* Day5View.swift */; };
 		249BB62E1B207E1C00E41040 /* Day5View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249BB62D1B207E1C00E41040 /* Day5View.xib */; };
 		24E38CEB1B1C9F630033F52B /* Day2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E38CEA1B1C9F630033F52B /* Day2View.swift */; };
+		24FE63381B21BE2500CA30CE /* Day6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FE63371B21BE2500CA30CE /* Day6View.swift */; };
+		24FE633A1B21BE3800CA30CE /* Day6View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FE63391B21BE3800CA30CE /* Day6View.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		249BB62B1B207E0F00E41040 /* Day5View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day5View.swift; sourceTree = "<group>"; };
 		249BB62D1B207E1C00E41040 /* Day5View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Day5View.xib; sourceTree = "<group>"; };
 		24E38CEA1B1C9F630033F52B /* Day2View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day2View.swift; sourceTree = "<group>"; };
+		24FE63371B21BE2500CA30CE /* Day6View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day6View.swift; sourceTree = "<group>"; };
+		24FE63391B21BE3800CA30CE /* Day6View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Day6View.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 				245B62781B1F2A5200547242 /* Day3 */,
 				245B62791B1F2A6400547242 /* Day4 */,
 				249BB62A1B207DD700E41040 /* Day5 */,
+				24FE63361B21BE0700CA30CE /* Day6 */,
 			);
 			path = CoreAnimation100Days;
 			sourceTree = "<group>";
@@ -161,6 +166,15 @@
 				249BB62D1B207E1C00E41040 /* Day5View.xib */,
 			);
 			name = Day5;
+			sourceTree = "<group>";
+		};
+		24FE63361B21BE0700CA30CE /* Day6 */ = {
+			isa = PBXGroup;
+			children = (
+				24FE63371B21BE2500CA30CE /* Day6View.swift */,
+				24FE63391B21BE3800CA30CE /* Day6View.xib */,
+			);
+			name = Day6;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				245B2AEE1B19841100F6CF06 /* Main.storyboard in Resources */,
+				24FE633A1B21BE3800CA30CE /* Day6View.xib in Resources */,
 				249BB62E1B207E1C00E41040 /* Day5View.xib in Resources */,
 				24784A751B1DDF5900BE3C90 /* Day3View.xib in Resources */,
 				245B2AF31B19841100F6CF06 /* LaunchScreen.xib in Resources */,
@@ -273,6 +288,7 @@
 				245B2AE71B19841100F6CF06 /* AppDelegate.swift in Sources */,
 				242807B21B1B522900AC055E /* Day1View.swift in Sources */,
 				24784A731B1DD7F200BE3C90 /* Day3View.swift in Sources */,
+				24FE63381B21BE2500CA30CE /* Day6View.swift in Sources */,
 				249BB62C1B207E0F00E41040 /* Day5View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
