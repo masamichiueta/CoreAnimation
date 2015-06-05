@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class Day6ViewController: DetailViewController {
+@IBDesignable class Day6ViewController: DetailViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var rateLabel: UILabel!
@@ -32,6 +32,11 @@ import UIKit
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        //tableView.rowHeight = UITableViewAutomaticDimension
+        //tableView.estimatedRowHeight = 100
+        tableView.rowHeight = 100
+        
         circleCenter = CGPoint(x: self.view.center.x , y: 200)
         drawBackgoundGradient()
         drawBackCircle()
@@ -142,7 +147,21 @@ import UIKit
         if currentRate % 2 == 0 || currentRate == progress * 100 - 1 {
             rateLabel.text = "\(currentRate)%"
         }
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        let cell = tableView.dequeueReusableCellWithIdentifier("timeCell") as! UITableViewCell
+        
+        return cell
     }
 
 }
