@@ -18,6 +18,8 @@ class Day7TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
@@ -26,21 +28,36 @@ class Day7TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    override func drawRect(rect: CGRect) {
-        
-        let path = UIBezierPath()
-        path.lineWidth = 1.0
-        UIColor(red: 189.0 / 255.0, green: 178.0 / 255.0, blue: 166.0 / 255.0, alpha: 1.0).setStroke()
-        path.moveToPoint(CGPoint(x: self.bounds.width / 2.0, y: 0))
-        path.addLineToPoint(CGPoint(x: self.bounds.width / 2.0, y: (self.bounds.height - iconImageView.bounds.height) / 2.0))
-        
-        path.stroke()
-        
-        path.moveToPoint(CGPoint(x: self.bounds.width / 2.0, y: (self.bounds.height + iconImageView.bounds.height) / 2.0))
-        path.addLineToPoint(CGPoint(x: self.bounds.width / 2.0, y: self.bounds.height))
-        path.stroke()
-        
-        super.drawRect(rect)
-    }
-    
+//    override func drawRect(rect: CGRect) {
+//        
+//        
+//        var indexPath: NSIndexPath?
+//        var count = 0
+//        
+//        if let tableView = superview as? UITableView {
+//            indexPath = tableView.indexPathForCell(self)
+//            count = tableView.numberOfRowsInSection(0)
+//        }
+//        
+//        let path = UIBezierPath()
+//        path.lineWidth = 1.0
+//        UIColor(red: 189.0 / 255.0, green: 178.0 / 255.0, blue: 166.0 / 255.0, alpha: 1.0).setStroke()
+//        
+//        if let indexPath = indexPath {
+//            if indexPath.row != 0 {
+//                path.moveToPoint(CGPoint(x: self.bounds.width / 2.0, y: 0))
+//                path.addLineToPoint(CGPoint(x: self.bounds.width / 2.0, y: (self.bounds.height - iconImageView.bounds.height) / 2.0))
+//                path.stroke()
+//            }
+//            
+//            if indexPath.row != count {
+//                path.moveToPoint(CGPoint(x: self.bounds.width / 2.0, y: (self.bounds.height + iconImageView.bounds.height) / 2.0))
+//                path.addLineToPoint(CGPoint(x: self.bounds.width / 2.0, y: self.bounds.height))
+//                path.stroke()
+//            }
+//        }
+//        
+//        super.drawRect(rect)
+//    }
+//    
 }
