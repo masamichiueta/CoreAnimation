@@ -73,6 +73,11 @@ class MasterViewController: UITableViewController {
             let detail = nav.topViewController as! Day6ViewController
             self.detailViewController = detail
             self.navigationController?.pushViewController(detail, animated: true)
+        case 6:
+            let nav = UIStoryboard(name: "Day7View", bundle: nil).instantiateInitialViewController() as! UINavigationController
+            let detail = nav.topViewController as! Day7ViewController
+            self.detailViewController = detail
+            self.navigationController?.pushViewController(detail, animated: true)
         default:
             self.performSegueWithIdentifier("showDetail", sender: self)
         }

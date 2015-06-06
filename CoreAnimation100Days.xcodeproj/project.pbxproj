@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240A9FF21B2308460037DF25 /* Day7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240A9FF11B2308460037DF25 /* Day7ViewController.swift */; };
+		240A9FF41B23085D0037DF25 /* Day7View.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240A9FF31B23085D0037DF25 /* Day7View.storyboard */; };
+		240A9FF61B2308740037DF25 /* Day7TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240A9FF51B2308740037DF25 /* Day7TableViewCell.swift */; };
 		242807B21B1B522900AC055E /* Day1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242807B11B1B522900AC055E /* Day1View.swift */; };
 		245B2AE71B19841100F6CF06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B2AE61B19841100F6CF06 /* AppDelegate.swift */; };
 		245B2AE91B19841100F6CF06 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B2AE81B19841100F6CF06 /* MasterViewController.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		240A9FF11B2308460037DF25 /* Day7ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day7ViewController.swift; sourceTree = "<group>"; };
+		240A9FF31B23085D0037DF25 /* Day7View.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Day7View.storyboard; sourceTree = "<group>"; };
+		240A9FF51B2308740037DF25 /* Day7TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day7TableViewCell.swift; sourceTree = "<group>"; };
 		242807B11B1B522900AC055E /* Day1View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day1View.swift; sourceTree = "<group>"; };
 		245B2AE11B19841100F6CF06 /* CoreAnimation100Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimation100Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		245B2AE51B19841100F6CF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +88,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240A9FF01B23082C0037DF25 /* Day7 */ = {
+			isa = PBXGroup;
+			children = (
+				240A9FF11B2308460037DF25 /* Day7ViewController.swift */,
+				240A9FF31B23085D0037DF25 /* Day7View.storyboard */,
+				240A9FF51B2308740037DF25 /* Day7TableViewCell.swift */,
+			);
+			name = Day7;
+			sourceTree = "<group>";
+		};
 		245B2AD81B19841100F6CF06 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +133,7 @@
 				245B62791B1F2A6400547242 /* Day4 */,
 				249BB62A1B207DD700E41040 /* Day5 */,
 				24FE63361B21BE0700CA30CE /* Day6 */,
+				240A9FF01B23082C0037DF25 /* Day7 */,
 			);
 			path = CoreAnimation100Days;
 			sourceTree = "<group>";
@@ -265,6 +282,7 @@
 			files = (
 				245B2AEE1B19841100F6CF06 /* Main.storyboard in Resources */,
 				24612CFF1B21CB3C00636194 /* Day6View.storyboard in Resources */,
+				240A9FF41B23085D0037DF25 /* Day7View.storyboard in Resources */,
 				249BB62E1B207E1C00E41040 /* Day5View.xib in Resources */,
 				24784A751B1DDF5900BE3C90 /* Day3View.xib in Resources */,
 				245B2AF31B19841100F6CF06 /* LaunchScreen.xib in Resources */,
@@ -297,7 +315,9 @@
 				242807B21B1B522900AC055E /* Day1View.swift in Sources */,
 				24612D051B21DA8200636194 /* Day6TableViewCell.swift in Sources */,
 				24784A731B1DD7F200BE3C90 /* Day3View.swift in Sources */,
+				240A9FF61B2308740037DF25 /* Day7TableViewCell.swift in Sources */,
 				249BB62C1B207E0F00E41040 /* Day5View.swift in Sources */,
+				240A9FF21B2308460037DF25 /* Day7ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
