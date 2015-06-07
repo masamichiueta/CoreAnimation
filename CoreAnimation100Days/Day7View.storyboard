@@ -45,10 +45,10 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aG6-HQ-m19">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alerm" translatesAutoresizingMaskIntoConstraints="NO" id="aG6-HQ-m19">
                                                     <rect key="frame" x="270" y="20" width="60" height="60"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="vCg-8d-6Lq"/>
+                                                        <constraint firstAttribute="height" priority="750" constant="60" id="vCg-8d-6Lq"/>
                                                         <constraint firstAttribute="width" constant="60" id="wUy-b9-Qt0"/>
                                                     </constraints>
                                                 </imageView>
@@ -146,4 +146,7 @@
             <point key="canvasLocation" x="405" y="251"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="alerm" width="60" height="60"/>
+    </resources>
 </document>

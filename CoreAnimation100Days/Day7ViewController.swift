@@ -35,7 +35,6 @@ import UIKit
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
-        //tableView.rowHeight = 100
         
         circleCenter = CGPoint(x: self.view.center.x , y: 200)
         drawBackgoundGradient()
@@ -159,9 +158,17 @@ import UIKit
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("timeCell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("timeCell") as! Day7TableViewCell
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = cell as! Day7TableViewCell
+        cell.drawCenterLineAtIndexPath(indexPath, numberOfRows: 3)
+        
+        
     }
     
 }
