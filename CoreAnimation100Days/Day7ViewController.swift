@@ -23,6 +23,8 @@ import UIKit
     var timer: NSTimer!
     var progress: CGFloat = 0.0
     
+    let data = ["workout", "sample"]
+    
     @IBInspectable var circleRadius: CGFloat = CGFloat(100)
     
     @IBInspectable var gradientStartColor: UIColor = UIColor(red: 217 / 255.0, green: 69 / 255.0, blue: 74.0 / 255.0, alpha: 1.0)
